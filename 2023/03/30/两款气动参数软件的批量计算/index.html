@@ -250,22 +250,25 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://example.com/2023/03/30/%E4%B8%A4%E6%AC%BE%E6%B0%94%E5%8A%A8%E5%8F%82%E6%95%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%89%B9%E9%87%8F%E8%AE%A1%E7%AE%97/",
-  owner: 'xuDaoz',
-  repo: 'xuDaoz.github.io',
-  oauth: {
-    client_id: 'cc013a64054c27c0cb90',
-    client_secret: '5261820c264a729dcef95e6896ae8c0c9b589a5a',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
+
+
   
+  	<div id="gitalk-container"></div>
+		<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: 'cc013a64054c27c0cb90',
+        clientSecret: '5261820c264a729dcef95e6896ae8c0c9b589a5a',
+        repo: 'xuDaoz.github.io',
+        owner: 'xuDaoz',
+        admin: 'xuDaoz',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
 
 
           </div>
